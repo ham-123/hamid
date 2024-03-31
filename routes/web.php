@@ -54,4 +54,4 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/', [HamidController::class, 'home'])->name('hamid_home');
 
-require __DIR__ . '/auth.php';
+require __DIR__ . '/auth.php'; 

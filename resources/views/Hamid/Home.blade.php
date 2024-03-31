@@ -169,6 +169,14 @@
                                     <div class="progress-bar" role="progressbar" style="width: 58%" aria-valuenow="58"
                                         aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
+                                <div class="clearfix">
+                                    <div class="text-dark fw-bold float-left">PHP</div>
+                                    <div class="text-muted float-right">96%</div>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 96%" aria-valuenow="96"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-lg-6">
