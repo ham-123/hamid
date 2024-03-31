@@ -42,7 +42,7 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-50">
                     <div class="mt-4">
-                        <a href="#" class="btn btn-primary">Clients</a>
+                        <a href="{{Route('clients.index')}}" class="btn btn-primary">Clients</a>
                     </div>
                 </div>
             </div>

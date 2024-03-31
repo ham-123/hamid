@@ -512,69 +512,47 @@
             <div class="row justify-content-center">
                 <div class="col-lg-12">
                     <div class="text-center mx-auto text-white section-main-title">
-                        <h2>Our <span class="fw-bold">Client</span></h2>
+                        <h2>Nos <span class="fw-bold">Clients</span></h2>
                         <div class="main-title-border">
                             <i class="mdi mdi-asterisk"></i>
                         </div>
-                        <p class="mx-auto mt-2">It is a long established fact that a reader will be distracted by the
-                            readable content of a page when looking at its layout.</p>
+                        <p class="mx-auto mt-2">Les differents avis des clients</p>
                     </div>
                 </div>
             </div>
             <div class="row mt-4 pt-4">
                 <div class="col-lg-12">
-                    <div id="carouselExampleCaptions" class="carousel slide">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
-                                class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
-                        </div>
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
-                            <div class="carousel-item active text-white people_says text-center">
+                            @foreach($clients as $client)
+                            <div class="carousel-item {{ $loop->first ? 'active' : '' }} text-white people_says text-center">
                                 <div class="people_icon">
                                     <i class="mbri-user"></i>
                                 </div>
                                 <div class="people_review_box mt-4">
-                                    <p class="people_name text-white h5 fw-bold mb-0">Kirk McFall</p>
-                                    <p class="h6">Google</p>
-                                    <p class="people_review text-white mx-auto pt-3 mb-0">" The most well-known dummy text
-                                        is the 'Lorem Ipsum', which is said originated the 16th century. This ancient dummy
-                                        text is also incomprehensible, of most European in Latin script."</p>
+                                    <p class="people_name text-white h5 fw-bold mb-0">{{ $client->nom_client }}</p>
+                                    <p class="h6">{{ $client->entreprise }}</p>
+                                    <p class="people_review text-white mx-auto pt-3 mb-0">{{ $client->commentaire }}</p>
                                 </div>
                             </div>
-                            <div class="carousel-item text-white people_says text-center">
-                                <div class="people_icon">
-                                    <i class="mbri-user"></i>
-                                </div>
-                                <div class="people_review_box mt-4">
-                                    <p class="people_name text-white h5 fw-bold mb-0">Edward Evans</p>
-                                    <p class="h6">Google</p>
-                                    <p class="people_review text-white mx-auto pt-3 mb-0">" The most well-known dummy text
-                                        is the 'Lorem Ipsum', which is said originated the 16th century. This ancient dummy
-                                        text is also incomprehensible, of most European in Latin script."</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item text-white people_says text-center">
-                                <div class="people_icon">
-                                    <i class="mbri-user"></i>
-                                </div>
-                                <div class="people_review_box mt-4">
-                                    <p class="people_name text-white h5 fw-bold mb-0">Antonio Hernandez</p>
-                                    <p class="h6">Google</p>
-                                    <p class="people_review text-white mx-auto pt-3 mb-0">" The most well-known dummy text
-                                        is the 'Lorem Ipsum', which is said originated the 16th century. This ancient dummy
-                                        text is also incomprehensible, of most European in Latin script."</p>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
+    
+    
     <!-- END CLIENT -->
 
     <!-- START GREAT PEOPLE -->
